@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный клуб | Читаем вместе</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-reader"></i>
+                    <h1>Книжный Клуб</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#discussions" class="nav-link active">Обсуждения</a></li>
+                        <li><a href="#books" class="nav-link">Списки книг</a></li>
+                        <li><a href="#meetings" class="nav-link">График встреч</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Герой-секция -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Читаем. Обсуждаем. Вдохновляем.</h2>
+                    <p class="hero-subtitle">Присоединяйтесь к нашему сообществу книголюбов</p>
+                    <a href="#meetings" class="btn">Участвовать во встрече</a>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-book-open"></i>
+                </div>
+            </section>
+
+            <!-- Секция обсуждений -->
+            <section id="discussions" class="section">
+                <h2 class="section-title">Обсуждения</h2>
+                <div class="discussions-grid">
+                    <!-- Обсуждение 1 -->
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <h3 class="discussion-title">"Преступление и наказание" - актуальность сегодня</h3>
+                            <span class="discussion-date">2 дня назад</span>
+                        </div>
+                        <p class="discussion-text">Насколько актуальны темы, поднятые Достоевским, в современном
+                            обществе? Есть ли место "сверхчеловеку" в нашем мире?</p>
+                        <div class="discussion-footer">
+                            <div class="discussion-author">
+                                <i class="fas fa-user"></i>
+                                <span>Мария Иванова</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span><i class="fas fa-comment"></i> 12</span>
+                                <span><i class="fas fa-heart"></i> 24</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Обсуждение 2 -->
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <h3 class="discussion-title">Фантастика как отражение социальных проблем</h3>
+                            <span class="discussion-date">5 дней назад</span>
+                        </div>
+                        <p class="discussion-text">Какие современные фантастические произведения лучше всего отражают
+                            проблемы нашего общества?</p>
+                        <div class="discussion-footer">
+                            <div class="discussion-author">
+                                <i class="fas fa-user"></i>
+                                <span>Алексей Петров</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span><i class="fas fa-comment"></i> 18</span>
+                                <span><i class="fas fa-heart"></i> 32</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Обсуждение 3 -->
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <h3 class="discussion-title">Книги, которые изменили ваше мировоззрение</h3>
+                            <span class="discussion-date">1 неделю назад</span>
+                        </div>
+                        <p class="discussion-text">Поделитесь книгами, которые оказали на вас наибольшее влияние и
+                            почему.</p>
+                        <div class="discussion-footer">
+                            <div class="discussion-author">
+                                <i class="fas fa-user"></i>
+                                <span>Екатерина Смирнова</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span><i class="fas fa-comment"></i> 42</span>
+                                <span><i class="fas fa-heart"></i> 56</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" id="loadMoreDiscussions">Загрузить больше обсуждений</button>
+            </section>
+
+            <!-- Секция списков книг -->
+            <section id="books" class="section">
+                <h2 class="section-title">Списки книг</h2>
+                <div class="books-tabs">
+                    <button class="tab-btn active" data-category="current">Текущее чтение</button>
+                    <button class="tab-btn" data-category="planned">Запланировано</button>
+                    <button class="tab-btn" data-category="finished">Прочитано</button>
+                </div>
+
+                <div class="books-grid">
+                    <!-- Книги будут загружены через JavaScript -->
+                </div>
+            </section>
+
+            <!-- Секция графика встреч -->
+            <section id="meetings" class="section">
+                <h2 class="section-title">График встреч</h2>
+                <div class="meetings-container">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                            <h3 id="currentMonth">Июнь 2023</h3>
+                            <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Календарь будет сгенерирован через JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="meetings-list">
+                        <h3 class="meetings-title">Ближайшие встречи</h3>
+                        <div class="meeting-item">
+                            <div class="meeting-date">
+                                <span class="meeting-day">15</span>
+                                <span class="meeting-month">Июня</span>
+                            </div>
+                            <div class="meeting-details">
+                                <h4>Обсуждение: "Мастер и Маргарита"</h4>
+                                <p><i class="fas fa-clock"></i> 18:30 - 21:00</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Кофейня "У страницы", ул. Книжная, 12</p>
+                            </div>
+                        </div>
+
+                        <div class="meeting-item">
+                            <div class="meeting-date">
+                                <span class="meeting-day">28</span>
+                                <span class="meeting-month">Июня</span>
+                            </div>
+                            <div class="meeting-details">
+                                <h4>Литературный вечер: Современная поэзия</h4>
+                                <p><i class="fas fa-clock"></i> 19:00 - 21:30</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Библиотека им. Горького</p>
+                            </div>
+                        </div>
+
+                        <div class="meeting-item">
+                            <div class="meeting-date">
+                                <span class="meeting-day">10</span>
+                                <span class="meeting-month">Июля</span>
+                            </div>
+                            <div class="meeting-details">
+                                <h4>Обсуждение: "1984" Джорджа Оруэлла</h4>
+                                <p><i class="fas fa-clock"></i> 18:00 - 20:30</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Книжный магазин "Читай-город"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Книжный клуб</h3>
+                    <p>Сообщество для тех, кто любит читать и обсуждать книги. Присоединяйтесь к нам!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-envelope"></i> info@bookclub.ru</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Книжный клуб. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
